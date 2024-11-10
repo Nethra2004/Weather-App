@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="/background.mp4" type="video/mp4">
+    </video>
+
+    <!-- Main Container for Title and Weather Data -->
+    <div class="main-container">
+        <h1>Explore the Weather Around the World</h1>
+
+        <!-- Container for Weather Data -->
+        <div class="container">
+            <!-- Weather Cards will be injected here by the server-side JS -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Fetch weather data from the API
+        $.getJSON('/weather', function(data) {
+            data.forEach(function(city) {
+                var card = `
+                    <div class="weather-card">
+                        <h2>${city.name}</h2>
+                        <p class="temperature">${city.main.temp}°C</p>
+                        <p>${city.weather[0].description}</p>
+                    </div>
+                `;
+                $('.container').append(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+

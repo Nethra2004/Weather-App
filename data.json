@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Paris",
+        "main": {
+            "temp": 15
+        },
+        "weather": [
+            {
+                "description": "Cloudy"
+            }
+        ]
+    },
+    {
+        "name": "New York",
+        "main": {
+            "temp": 22
+        },
+        "weather": [
+            {
+                "description": "Sunny"
+            }
+        ]
+    },
+    {
+        "name": "Tokyo",
+        "main": {
+            "temp": 18
+        },
+        "weather": [
+            {
+                "description": "Rainy"
+            }
+        ]
+    },
+    {
+        "name": "London",
+        "main": {
+            "temp": 12
+        },
+        "weather": [
+            {
+                "description": "Windy"
+            }
+        ]
+    }
+]
